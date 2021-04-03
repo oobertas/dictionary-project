@@ -1,9 +1,13 @@
-.App-logo {
+.app-logo {
   max-width: 200px;
   display: block;
   margin: 0 auto;
 }
 
-.App-header {
+.app-header {
   margin: 20px;
+}
+
+.app-footer {
+  margin: 30px;
 }
