@@ -17,16 +17,26 @@ function App() {
           <a
             href="https://www.linkedin.com/in/olha-obertas-77932b15b/"
             target="_blank"
+            rel="noreferrer"
           >
             Olha Obertas
           </a>{" "}
           and is{" "}
-          <a href="https://github.com/oobertas" target="_blank">
+          <a
+            href="https://github.com/oobertas"
+            target="_blank"
+            rel="noreferrer"
+          >
             open-sourced on GitHub
           </a>
           <div>
             Icons made by{" "}
-            <a href="https://www.freepik.com" title="Freepik" target="_blank">
+            <a
+              href="https://www.freepik.com"
+              title="Freepik"
+              target="_blank"
+              rel="noreferrer"
+            >
               Freepik
             </a>{" "}
             from{" "}
@@ -34,6 +44,7 @@ function App() {
               href="https://www.flaticon.com/"
               title="Flaticon"
               target="_blank"
+              rel="noreferrer"
             >
               {" "}
               www.flaticon.com
