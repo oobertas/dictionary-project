@@ -31,7 +31,7 @@ export default function Dictionary() {
           autoFocus="true"
           onChange={handleKeyWordChange}
           className="searchInput form-control form-control-lg"
-          placeholder="Enter a word you want to search for and press Enter"
+          placeholder="Enter a word and press Enter"
         />
       </form>
       <Results results={results} />
