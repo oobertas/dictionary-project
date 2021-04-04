@@ -17,6 +17,11 @@ export default function Dictionary() {
     // documentation: https://dictionaryapi.dev
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).catch((err) => {
+      if (err.response.status === 404) {
+        setResults("error");
+      }
+    });
   }
 
   function handleKeyWordChange(event) {

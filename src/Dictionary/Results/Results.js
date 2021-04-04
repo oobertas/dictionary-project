@@ -3,7 +3,13 @@ import icon from "../../type_icon.png";
 import Meaning from "./Meaning";
 
 export default function Results(props) {
-  if (props.results) {
+  if (props.results === "error") {
+    return (
+      <div className="error">
+        Oops...I don't know this word 🧑‍🏫 You should try something else!
+      </div>
+    );
+  } else if (props.results) {
     return (
       <div className="Results">
         <h2 className="searchWord">{props.results.word.toLowerCase()}</h2>
@@ -17,6 +23,6 @@ export default function Results(props) {
       </div>
     );
   } else {
-    return <img src={icon} className="typeIcon" alt="logo" />; //"Oops...I don't know such word 🧑‍🏫 You should try something else 🧐";
+    return <img src={icon} className="typeIcon" alt="logo" />;
   }
 }
