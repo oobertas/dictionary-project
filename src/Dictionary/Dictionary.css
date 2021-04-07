@@ -45,7 +45,16 @@
   font-weight: 800;
 }
 
+.Phonetic {
+  text-align: center;
+}
+
+.btn-outline-info {
+  border-color: transparent;
+  border-radius: 100%;
+  padding: 10px;
+}
+
 li {
   list-style: none;
-  text-align: center;
 }

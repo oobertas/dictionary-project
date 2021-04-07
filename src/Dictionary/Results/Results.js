@@ -1,6 +1,7 @@
 import React from "react";
 import icon from "../../type_icon.png";
 import Meaning from "./Meaning";
+import Phonetic from "./Phonetic";
 
 export default function Results(props) {
   if (props.results === "error") {
@@ -13,6 +14,13 @@ export default function Results(props) {
     return (
       <div className="Results">
         <h2 className="searchWord">{props.results.word.toLowerCase()}</h2>
+        {props.results.phonetics.map(function (phonetic, index) {
+          return (
+            <div key={index}>
+              <Phonetic phonetic={phonetic} />
+            </div>
+          );
+        })}
         {props.results.meanings.map(function (meaning, index) {
           return (
             <div key={index}>
