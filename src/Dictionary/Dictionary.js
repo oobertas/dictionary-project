@@ -8,8 +8,14 @@ export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
   let [results, setResults] = useState(null);
   let [loaded, setLoaded] = useState(false);
+  let [photos, setPhotos] = useState(null);
+
   function handleResponse(response) {
     setResults(response.data[0]);
+  }
+
+  function handlePexelsResponse(response) {
+    setPhotos(response.data.photos);
   }
 
   function search(event) {
@@ -23,6 +29,16 @@ export default function Dictionary() {
         setResults("error");
       }
     });
+
+    const pexelsApiKey =
+      "563492ad6f917000010000013e44472f179047a2a1bc49e6b3041481";
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+    let headers = { Authorization: `Bearer ${pexelsApiKey}` };
+    axios
+      .get(pexelsApiUrl, {
+        headers: headers,
+      })
+      .then(handlePexelsResponse);
   }
 
   function handleKeyWordChange(event) {
@@ -48,7 +64,7 @@ export default function Dictionary() {
           </form>
           <div className="hint">suggested words: sunset, wine, bicycle...</div>
         </section>
-        <Results results={results} />
+        <Results results={results} photos={photos} />
       </div>
     );
   } else {

@@ -107,6 +107,12 @@
   display: inline-block;
 }
 
+.Photos img {
+  border-radius: 4px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
 .error {
   font-size: xx-large;
   font-weight: 900;

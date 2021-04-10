@@ -2,6 +2,7 @@ import React from "react";
 import icon from "../../type_icon.png";
 import Meaning from "./Meaning";
 import Phonetic from "./Phonetic";
+import Photos from "./Photos";
 
 export default function Results(props) {
   if (props.results === "error") {
@@ -23,6 +24,7 @@ export default function Results(props) {
             );
           })}
         </section>
+        <Photos photos={props.photos} />
         {props.results.meanings.map(function (meaning, index) {
           return (
             <section key={index}>
