@@ -1,3 +1,7 @@
+body {
+  background-color: #f5fffe;
+}
+
 .app-logo {
   max-width: 200px;
   display: block;

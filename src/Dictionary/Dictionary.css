@@ -3,29 +3,41 @@
   margin: 0 auto;
 }
 
-.searchInput {
-  max-width: 50%;
+.Dictionary section {
+  background-color: white;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px #29a887;
+  margin-top: 10px;
+}
+
+.Dictionary .hint {
+  font-size: 12px;
+  color: #777b7e;
+  padding-top: 20px;
+  margin-left: 5%;
+}
+
+.Dictionary .searchInput {
+  max-width: 90%;
   margin-top: 40px;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 5%;
+  margin-right: 5%;
   text-align: center;
   color: #777b7e;
   font-size: medium;
+  padding: 5px;
 }
 
-.error {
-  font-size: xx-large;
-  font-weight: 900;
-  text-align: center;
-  margin: 50px;
-  color: #7c0a02;
-}
-
-.searchWord {
-  text-align: center;
+.Results .searchWord {
+  text-align: left;
+  margin-left: 5%;
   margin-top: 30px;
-  color: #777b7e;
+  color: #ff7417;
   font-weight: 800;
+  font-size: 36px;
+  padding-bottom: 20px;
 }
 
 .typeIcon {
@@ -40,21 +52,65 @@
   margin: 30px;
 }
 
-.partOfSpeech {
+.Meaning .text {
+  font-size: 20px;
+  color: #777b7e;
+  margin-left: 5%;
+  text-align: left;
+}
+
+.Meaning #definition {
+  margin-bottom: 5px;
+}
+
+.Meaning #example {
+  font-size: 20px;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.Meaning .partOfSpeech {
   color: #ff7417;
   font-weight: 800;
+  text-align: left;
+  margin-bottom: 40px;
+  text-shadow: 0px 5px 40px #ff7417;
 }
 
 .Phonetic {
-  text-align: center;
+  text-align: left;
+  height: 80px;
+  margin-left: 4%;
+  font-size: 24px;
 }
 
-.btn-outline-info {
+.Phonetic .transcription {
+  margin-left: 3%;
+  color: #777b7e;
+}
+
+.Player {
+  display: inline;
+}
+
+.Player .btn-outline-info {
   border-color: transparent;
   border-radius: 100%;
   padding: 10px;
 }
 
-li {
-  list-style: none;
+.Synonyms {
+  text-align: left;
+}
+
+.Synonyms .text {
+  display: inline-block;
+}
+
+.error {
+  font-size: xx-large;
+  font-weight: 900;
+  text-align: center;
+  margin: 50px;
+  color: #7c0a02;
 }

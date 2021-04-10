@@ -5,8 +5,7 @@ export default function Phonetic(props) {
   return (
     <div className="Phonetic">
       <Player sound={props.phonetic.audio} />
-      <br />
-      <strong>{props.phonetic.text}</strong>
+      <strong className="transcription">{props.phonetic.text}</strong>
     </div>
   );
 }
